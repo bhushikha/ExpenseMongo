@@ -41,7 +41,8 @@ exports.getUpdate = async (req, res, next) => {
             throw new Error(err)
         })
 
-    } catch {
+    } catch (err) {
         res.status(500).json({ message: 'something went wrong', error: err })
     }
+
 }
