@@ -16,7 +16,7 @@ exports.postExpense = async (req, res, next) => {
         expense.save();
         res.status(201).json({ expense, success: true })
     }
-    catch {
+    catch(err) {
         err => {
             return res.status(500).json({ success: false, error: err })
         }

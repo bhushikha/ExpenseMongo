@@ -54,7 +54,7 @@ app.use(RazorpayRoutes)
 
 mongoose.connect(process.env.MONGOOSE)
     .then(result => {
-        app.listen(4000)
+        app.listen(3000)
     }).catch(err => {
         console.log(err)
     })
